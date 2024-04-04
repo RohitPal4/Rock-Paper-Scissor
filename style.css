@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.game{
+    margin: 20px;
+    border: 2px solid;
+    box-shadow: 1px 1px 5px 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 1000px;
+        
+}
+
+.myh1{
+    margin: 10px 40px;
+    font-size: 4rem;
+    color: blue;
+}
+ .choices button{
+    font-size: 4rem;
+    border-radius: 50%;
+    margin: 0 20px;
+    background-color: hsla(180, 100%, 50%, 0.867);
+    transition: background-color 0.5s ease;
+}
+
+.choices button:hover{
+    background-color: hsla(180, 100%, 50%, 0.267);
+    transform: rotateY(180deg);
+}
+
+#playerdisplay, #computerdisplay{
+    margin-top: 10px;
+    font-size: 3rem
+}
+
+#resultdisplay{
+    font-size: 5rem;
+    margin: 40px;
+}
+
+@keyframes winAnimation {
+    0% { color: green; }
+    50% { transform: scale(1.2); }
+    100% { color: green; transform: scale(1); }
+}
+
+@keyframes lossAnimation {
+    0% { color: red; }
+    50% { transform: scale(1.2); }
+    100% { color: red; transform: scale(1); }
+}
+
+@media only screen and (max-width: 600px){
+    
+    .myh1{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .choices button{
+        font-size: 2rem;
+        margin: 0 10px;
+    }
+
+    #playerdisplay, #computerdisplay{
+        font-size: 2rem;
+    }
+
+    #resultdisplay{
+        font-size: 1.5rem;
+    }
+
+}
